@@ -1,0 +1,11 @@
+@import "../../styles/colors";
+
+.header {
+  padding: 30px;
+  min-height: 300px;
+  background-color: $main-color;
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+}

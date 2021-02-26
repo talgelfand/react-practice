@@ -1,0 +1,7 @@
+.people {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  justify-content: center;
+  gap: 20px;
+}

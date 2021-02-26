@@ -1,0 +1,23 @@
+.navbar {
+  margin-top: 50px;
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    color: #fff;
+    &-item {
+      a {
+        color: #fff;
+      }
+      margin-right: 100px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
