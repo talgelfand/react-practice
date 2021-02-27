@@ -7,6 +7,7 @@ import ContactsPage from "../../pages/ContactsPage";
 function App() {
   return (
     <Router>
+      <Route exact path={"/"} component={HomePage} />
       <Route path={"/home"} component={HomePage} />
       <Route path={"/people"} component={PeoplePage} />
       <Route path={"/contacts"} component={ContactsPage} />
