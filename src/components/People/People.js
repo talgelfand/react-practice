@@ -3,7 +3,7 @@ import axios from "axios";
 import { Spinner } from "reactstrap";
 import Person from "../Person";
 
-export default class People extends Component {
+class People extends Component {
   state = {
     persons: [],
     isLoading: true,
@@ -19,7 +19,15 @@ export default class People extends Component {
 
   render() {
     return this.state.isLoading ? (
-      <Spinner color="info" />
+      <div
+        style={{
+          position: "relative",
+          left: "-50%",
+          transform: "translateX(50%)",
+        }}
+      >
+        <Spinner color="info" />
+      </div>
     ) : (
       this.state.persons.map((item) => (
         <Person
@@ -32,3 +40,5 @@ export default class People extends Component {
     );
   }
 }
+
+export default People;
