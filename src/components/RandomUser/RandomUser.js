@@ -29,18 +29,24 @@ class RandomUser extends Component {
   render() {
     return (
       <div className="random">
-        <h1 className="employee">Employee of the month:</h1>
-        <Button color="info" onClick={this.createRandomNumber}>
-          Random User
+        <h1 className="random__title">Random user:</h1>
+        <Button
+          className="random__button"
+          color="info"
+          onClick={this.createRandomNumber}
+        >
+          Generate
         </Button>
         {this.state.isLoading ? (
-          <h2>Click to generate random user</h2>
+          <p className="random__descr">Click to generate random user</p>
         ) : (
-          <Person
-            name={this.state.randomUser.name}
-            email={this.state.randomUser.email}
-            website={this.state.randomUser.website}
-          />
+          <div className="random__person">
+            <Person
+              name={this.state.randomUser.name}
+              email={this.state.randomUser.email}
+              website={this.state.randomUser.website}
+            />
+          </div>
         )}
       </div>
     );
