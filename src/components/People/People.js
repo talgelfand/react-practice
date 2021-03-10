@@ -3,6 +3,8 @@ import axios from "axios";
 import { Spinner } from "reactstrap";
 import Person from "../Person";
 
+import "./People.scss";
+
 class People extends Component {
   state = {
     persons: [],
@@ -26,7 +28,7 @@ class People extends Component {
           transform: "translateX(50%)",
         }}
       >
-        <Spinner color="info" />
+        <Spinner className="spinner" color="info" />
       </div>
     ) : (
       this.state.persons.map((item) => (
